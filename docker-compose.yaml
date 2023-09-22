@@ -26,6 +26,19 @@ services:
     command: composer install
     volumes:
       - ./backend:/var/www
+
+  app-frontend:
+    container_name: app-curotec-techchallenge-challenge-frontend
+    build:
+      context: .
+      dockerfile: ./frontend/Dockerfile-frontend
+    volumes:
+      - ./frontend:/var/www/project
+      - /var/www/project/node_modules
+    ports:
+      - 5173:5173
+    networks:
+      - app-curotec-techchallenge-network
   
   db:
     container_name: db-curotec-techchallenge
