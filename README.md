@@ -1,7 +1,5 @@
 # Tech Challange
 
-## A RESTful API for a task management application (to-do list)
-
 ### Sumary
 
 1. Technologies
